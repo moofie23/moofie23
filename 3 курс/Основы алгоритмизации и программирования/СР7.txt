@@ -1,0 +1,24 @@
+#include <iostream>
+#include <algorithm>
+#include <locale>  
+
+using namespace std;
+
+int main() {
+
+    string word, reverseword;
+
+    cout << "Введите слово: ";
+    cin >> word;
+
+    reverseword = word;
+
+    reverse(reverseword.begin(), reverseword.end());
+
+    if (word == reverseword)
+        cout << "Слово является палиндромом";
+    else
+        cout << "Слово не является палиндромом";
+
+    return 0;
+}

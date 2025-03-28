@@ -1,0 +1,15 @@
+#include <ctime>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    ifstream ifs("dates.txt");
+    tm date;
+    while (ifs >> get_time(&date, "%m.%Y"))
+        if (date.tm_mon > 1 && date.tm_mon < 5)
+            cout << put_time(&date, "%m.%Y") << endl;
+}

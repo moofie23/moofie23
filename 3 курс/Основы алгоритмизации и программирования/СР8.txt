@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main() {
+    vector<pair<string, string>> abiturients = {
+        {"Иванов", "неудовлетворительно"},
+        {"Петров", "неудовлетворительно"},
+        {"Сидоров", "отлично"},
+        {"Кузнецова", "удовлетворительно"}
+    };
+
+    for (const auto& abiturient : abiturients) {
+        if (abiturient.second != "неудовлетворительно") {
+            cout << "Абитуриент " << abiturient.first << " допущен ко второму экзамену." << endl;
+        }
+    }
+
+    return 0;
+}
